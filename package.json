@@ -3,14 +3,14 @@
   "private": false,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://a22511234.github.io",
+  "homepage": "./",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -b master -d dist"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
