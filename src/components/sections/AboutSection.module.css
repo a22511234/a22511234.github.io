@@ -1,0 +1,82 @@
+.about {
+  background-color: var(--light-color);
+}
+
+.aboutContent {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
+
+.aboutImage {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.imagePlaceholder {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: var(--gray-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+  color: var(--gray-color);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+
+.profileImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 確保圖片適應容器 */
+}
+
+.aboutText {
+  flex: 2;
+}
+
+.aboutText p {
+  margin-bottom: var(--spacing-md);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.contactInfo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.contactItem svg {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 992px) {
+  .aboutContent {
+    flex-direction: column;
+  }
+  
+  .aboutImage {
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .aboutText {
+    text-align: center;
+  }
+  
+  .contactInfo {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,90 @@
+.contact {
+  background-color: white;
+}
+
+.contactContent {
+  display: flex;
+  gap: var(--spacing-lg);
+}
+
+.contactInfo {
+  flex: 1;
+}
+
+.contactInfo h3 {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-md);
+}
+
+.contactInfo p {
+  margin-bottom: var(--spacing-md);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.contactDetails {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.contactItem svg {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+}
+
+.contactForm {
+  flex: 1;
+  background-color: var(--gray-light);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-md);
+}
+
+.formGroup {
+  margin-bottom: var(--spacing-md);
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: var(--spacing-xs);
+  font-weight: 500;
+}
+
+.formGroup input,
+.formGroup textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--gray-color);
+  border-radius: var(--border-radius-sm);
+  font-family: var(--font-family);
+  font-size: 1rem;
+}
+
+.formGroup textarea {
+  resize: vertical;
+}
+
+.formSuccess {
+  text-align: center;
+  padding: var(--spacing-lg) 0;
+}
+
+.formSuccess h3 {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-md);
+}
+
+@media screen and (max-width: 992px) {
+  .contactContent {
+    flex-direction: column;
+  }
+}

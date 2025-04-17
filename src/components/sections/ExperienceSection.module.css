@@ -1,0 +1,181 @@
+.experience {
+  background-color: white;
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: var(--spacing-md) 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  background-color: var(--primary-light);
+  transform: translateX(-50%);
+}
+
+.timelineItem {
+  position: relative;
+  margin-bottom: var(--spacing-xl);
+}
+
+.timelineDot {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+/* 左側時間點 */
+.timelineItem.left .timelineDate {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(50% - var(--spacing-md));
+  text-align: right;
+  padding-right: var(--spacing-md);
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+.timelineItem.left .timelineContent {
+  margin-left: calc(50% + var(--spacing-md));
+  width: 55%; /* 增加框架寬度 */
+  background-color: var(--gray-light);
+  padding: var(--spacing-lg); /* 增加內邊距 */
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+}
+
+.timelineItem.left .timelineContent::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: -10px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid var(--gray-light);
+}
+
+/* 右側時間點 */
+.timelineItem.right .timelineDate {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: calc(50% - var(--spacing-md));
+  text-align: left;
+  padding-left: var(--spacing-md);
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+.timelineItem.right .timelineContent {
+  margin-left: 0;
+  margin-right: calc(50% + var(--spacing-md));
+  background-color: var(--gray-light);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+}
+
+.timelineItem.right .timelineContent::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  right: -10px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 10px solid var(--gray-light);
+}
+
+/* 文字樣式通用 */
+.timelineTitle {
+  font-size: 1.3rem;
+  margin-bottom: var(--spacing-xs);
+  color: var(--primary-color);
+}
+
+.timelinePosition {
+  font-size: 1.1rem;
+  margin-bottom: var(--spacing-sm);
+  color: var(--gray-color);
+}
+
+.timelineDescription {
+  padding-left: var(--spacing-md);
+}
+
+.timelineDescription li {
+  margin-bottom: var(--spacing-xs);
+  position: relative;
+  list-style-type: disc;
+}
+
+/* 手機版 RWD */
+@media screen and (max-width: 768px) {
+  .timeline::before {
+    left: 30px;
+  }
+
+  .timelineDot {
+    left: 30px;
+  }
+
+  .timelineItem.left .timelineDate,
+  .timelineItem.right .timelineDate {
+    position: relative;
+    width: 100%;
+    text-align: left;
+    padding-left: 70px;
+    padding-right: 0;
+    margin-bottom: var(--spacing-xs);
+    left: 0;
+  }
+
+  .timelineItem.left .timelineContent,
+  .timelineItem.right .timelineContent {
+    margin-left: 70px;
+    margin-right: 0;
+    width: calc(100% - 70px);
+  }
+
+  .timelineItem.right .timelineContent::before,
+  .timelineItem.left .timelineContent::before {
+    left: -10px;
+    right: auto;
+    border-left: none;
+    border-right: 10px solid var(--gray-light);
+  }
+}
+
+.timelineContent {
+  margin-left: calc(50% + var(--spacing-md));
+  background-color: var(--gray-light);
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timelineContent:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}

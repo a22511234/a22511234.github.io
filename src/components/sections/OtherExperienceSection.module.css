@@ -1,0 +1,87 @@
+.otherExperience {
+  background-color: #f8f9fa;
+}
+
+.experienceGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.experienceCard {
+  background-color: white;
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-md);
+  padding: var(--spacing-md);
+  display: flex;
+  transition: var(--transition);
+  height: 100%;
+}
+
+.experienceCard:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.experienceIcon {
+  margin-right: var(--spacing-md);
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 60px;
+}
+
+.experienceContent {
+  flex: 1;
+}
+
+.experienceTitle {
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-xs);
+  color: var(--primary-color);
+}
+
+.experiencePosition {
+  font-size: 1.1rem;
+  margin-bottom: var(--spacing-xs);
+  color: var(--gray-color);
+}
+
+.experiencePeriod {
+  font-size: 0.9rem;
+  color: var(--gray-color);
+  margin-bottom: var(--spacing-sm);
+}
+
+.experienceResponsibilities {
+  padding-left: var(--spacing-md);
+}
+
+.experienceResponsibilities li {
+  margin-bottom: var(--spacing-xs);
+  position: relative;
+  list-style-type: disc;
+}
+
+@media screen and (max-width: 768px) {
+  .experienceGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .experienceCard {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .experienceIcon {
+    margin-right: 0;
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .experienceResponsibilities {
+    text-align: left;
+  }
+}

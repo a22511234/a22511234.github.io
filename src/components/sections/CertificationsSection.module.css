@@ -1,0 +1,70 @@
+.certifications {
+  background-color: #f8f9fa;
+}
+
+.certificationsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.certificationCard {
+  background-color: white;
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-md);
+  padding: var(--spacing-md);
+  display: flex;
+  align-items: center;
+  transition: var(--transition);
+}
+
+.certificationCard:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.certificationIcon {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-right: var(--spacing-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+}
+
+.certificationContent {
+  flex: 1;
+}
+
+.certificationTitle {
+  font-size: 1.3rem;
+  margin-bottom: var(--spacing-xs);
+  color: var(--primary-color);
+}
+
+.certificationName {
+  font-size: 1rem;
+  margin-bottom: var(--spacing-xs);
+}
+
+.certificationDate {
+  font-size: 0.9rem;
+  color: var(--gray-color);
+}
+
+@media screen and (max-width: 768px) {
+  .certificationsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .certificationCard {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .certificationIcon {
+    margin-right: 0;
+    margin-bottom: var(--spacing-sm);
+  }
+}

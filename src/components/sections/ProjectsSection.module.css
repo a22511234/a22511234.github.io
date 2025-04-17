@@ -1,0 +1,82 @@
+.projects {
+  background-color: #f8f9fa;
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.projectCard {
+  background-color: white;
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-md);
+  padding: var(--spacing-md);
+  transition: var(--transition);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.projectCard:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.projectHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-sm);
+  flex-wrap: wrap;
+}
+
+.projectTitle {
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  margin-right: var(--spacing-sm);
+}
+
+.projectPeriod {
+  font-size: 0.9rem;
+  color: var(--gray-color);
+  white-space: nowrap;
+}
+
+.projectDescription {
+  margin-bottom: var(--spacing-sm);
+  color: var(--dark-color);
+}
+
+.projectDetails {
+  padding-left: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+  flex-grow: 1;
+}
+
+.projectDetails li {
+  margin-bottom: var(--spacing-xs);
+  position: relative;
+  list-style-type: disc;
+}
+
+.projectTechnologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+}
+
+.techTag {
+  background-color: rgba(37, 99, 235, 0.1);
+  color: var(--primary-color);
+  padding: 4px 10px;
+  border-radius: var(--border-radius-sm);
+  font-size: 0.9rem;
+}
+
+@media screen and (max-width: 768px) {
+  .projectsGrid {
+    grid-template-columns: 1fr;
+  }
+}

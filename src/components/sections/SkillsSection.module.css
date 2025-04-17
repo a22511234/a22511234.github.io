@@ -1,0 +1,66 @@
+.skills {
+  background-color: white;
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.skillCategory {
+  margin-bottom: var(--spacing-lg);
+}
+
+.categoryTitle {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-xs);
+  border-bottom: 2px solid var(--primary-light);
+}
+
+.skillsList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.progressContainer {
+  width: 100%;
+}
+
+.progressInfo {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-xs);
+}
+
+.progressName {
+  font-weight: 500;
+}
+
+.progressPercent {
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.progressBg {
+  width: 100%;
+  height: 10px;
+  background-color: var(--gray-light);
+  border-radius: var(--border-radius-sm);
+  overflow: hidden;
+}
+
+.progressBar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary-color), var(--primary-light));
+  border-radius: var(--border-radius-sm);
+}
+
+@media screen and (max-width: 768px) {
+  .skillsGrid {
+    grid-template-columns: 1fr;
+  }
+}
