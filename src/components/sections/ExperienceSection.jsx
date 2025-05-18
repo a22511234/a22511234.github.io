@@ -35,7 +35,7 @@ const ExperienceSection = () => {
   return (
     <section id="experience" className={`${styles.experience} section`}>
       <div className="container">
-        <SectionTitle title="實習經驗" />
+        <SectionTitle title="過往實習與工作經驗" />
         <div className={styles.timeline}>
           {experienceData.map((experience, index) => (
             <TimelineItem key={index} experience={experience} index={index} />

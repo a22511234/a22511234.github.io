@@ -27,6 +27,13 @@
   color: var(--primary-color);
 }
 
+.logoImage {
+  width: 60px; /* èª¿æ•´åœ–ç‰‡å¤§å° */
+  height: 60px;
+  margin-right: 25px; /* èˆ‡æ–‡å­—é–“è· */
+  vertical-align: middle; /* å‚ç›´å°é½Š */
+}
+
 .navMenu {
   display: flex;
   align-items: center;
@@ -59,7 +66,7 @@
   color: var(--primary-color);
 }
 
-/* ¤l¿ï³æ¬ÛÃö¼Ë¦¡ */
+/* ï¿½lï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë¦ï¿½ */
 .hasSubmenu {
   position: relative;
 }
@@ -87,7 +94,7 @@
   transition: all 0.3s ease;
 }
 
-/* Åã¥Ü¤l¿ï³æªº¼Ë¦¡ */
+/* ï¿½ï¿½Ü¤lï¿½ï¿½æªºï¿½Ë¦ï¿½ */
 .submenu.show {
   opacity: 1;
   visibility: visible;
@@ -138,7 +145,7 @@
     justify-content: center;
   }
   
-  /* ¤â¾÷ª©¤l¿ï³æ¼Ë¦¡ */
+  /* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½lï¿½ï¿½ï¿½Ë¦ï¿½ */
   .submenu {
     position: static;
     box-shadow: none;

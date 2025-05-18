@@ -49,7 +49,7 @@ export const experienceData = [
     period: "Nov. 2024 – Now",
     responsibilities: [
       "團隊採取敏捷式開發",
-      "透過資料導向與函數式程式設計開發系統",
+      "透過 Data Oriented 與 Functional Programming開發系統",
       "採取TDD的方式進行開發，試想可能的測試案例再進行開發，測試通過後，再重構程式碼",
       "透過CQRS的方式將查詢與命令分離，解決資料庫效能問題",
       "利用Event Sourcing的方式，記入每個事件的發生",

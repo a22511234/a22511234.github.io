@@ -58,7 +58,14 @@ const Header = () => {
       <div className="container">
         <nav className={styles.navbar}>
           <div className={styles.logo}>
-            <a href="#hero">{personalInfo.englishName}</a>
+            <a href="#hero">
+              <img 
+                src="/images/Logo2.png" 
+                alt="Logo" 
+                className={styles.logoImage} 
+              />
+              {personalInfo.englishName}
+            </a>
           </div>
           <div 
             className={styles.menuToggle} 
